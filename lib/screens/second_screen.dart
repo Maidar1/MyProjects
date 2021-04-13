@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// SCREEN_2
 class SecondScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -16,11 +17,12 @@ class _SecondScreen extends State<SecondScreen> {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          body: Center(
-            child: Container(
+          body: Container(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+
+                  // WIDGET_1 - HEADING
                   Container(
                     margin: EdgeInsets.only(bottom: 20, right: 85, left: 85),
                     child: Text("Rank to your important topic",
@@ -30,7 +32,17 @@ class _SecondScreen extends State<SecondScreen> {
                           fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center,),
                   ),
-                  Text("SAT MATH", style: TextStyle(color: Colors.black45, fontSize: 20,)),
+
+                  // WIDGET_2 - HEADING
+                  Container(
+                    margin: EdgeInsets.only(left: 25),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("SAT MATH", style: TextStyle(color: Colors.black45, fontSize: 20, fontWeight: FontWeight.w600)),
+                    ),
+                  ),
+
+                  // WIDGET_3 - SLIDER
                   Container(
                     child: Slider(
                         value: value1,
@@ -40,7 +52,17 @@ class _SecondScreen extends State<SecondScreen> {
                         onChanged: (value) => this.value1 = value,
                   ),
                   ),
-                  Text("SAT READING", style: TextStyle(color: Colors.black45, fontSize: 20,)),
+
+                  // WIDGET_4 - HEADING
+                  Container(
+                    margin: EdgeInsets.only(left: 25),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("SAT READING", style: TextStyle(color: Colors.black45, fontSize: 20, fontWeight: FontWeight.w600)),
+                    ),
+                  ),
+
+                  // WIDGET_5 - SLIDER
                   Slider(
                     value: value2,
                     min: 0,
@@ -48,7 +70,17 @@ class _SecondScreen extends State<SecondScreen> {
                     activeColor: Colors.green,
                     onChanged: (value) => this.value2 = value,
                   ),
-                  Text("SAT WRITING", style: TextStyle(color: Colors.black45, fontSize: 20,)),
+
+                  // WIDGET_6 - HEADING
+                  Container(
+                    margin: EdgeInsets.only(left: 25),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("SAT WRITING", style: TextStyle(color: Colors.black45, fontSize: 20, fontWeight: FontWeight.w600)),
+                    ),
+                  ),
+
+                  // WIDGET_7 - SLIDER
                   Slider(
                     value: value3,
                     min: 0,
@@ -58,9 +90,9 @@ class _SecondScreen extends State<SecondScreen> {
                   ),
                 ],
               ),
-            )
-          ),
+            ),
         ),
       );
   }
 }
+
